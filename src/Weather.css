@@ -43,6 +43,7 @@ Light grey: #EEEFEE */
 .Weather img {
   height: 66px;
   width: 66px;
+  margin-right: 4px;
 }
 
 .Weather ul {
@@ -72,7 +73,6 @@ Light grey: #EEEFEE */
   color: #314085;
   font-size: 18px;
   line-height: 1;
-  margin-left: 4px;
   position: relative;
   top: -32px;
 }

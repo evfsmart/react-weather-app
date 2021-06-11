@@ -37,7 +37,7 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            DiinosoftLabs
+            DinosoftLabs
           </a>
           .
         </footer>

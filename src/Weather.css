@@ -37,7 +37,11 @@ Light grey: #EEEFEE */
   font-size: 42px;
   font-weight: 900;
   line-height: 1;
-  margin: 20px 0 8px 0;
+  margin: 24px 0 8px 0;
+}
+
+.Weather hr {
+  color: #6a8ab1;
 }
 
 .Weather img {

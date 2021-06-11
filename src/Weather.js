@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast.js";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -11,6 +12,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
@@ -22,6 +24,15 @@ export default function Weather(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   function search() {
     const apiKey = `17a639a638a4bfe25417abb69ec4868d`;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -31,15 +42,6 @@ export default function Weather(props) {
       .catch(function (error) {
         if (error.response.status === 404) alert("Not a city");
       });
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
-  }
-
-  function handleCityChange(event) {
-    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -66,6 +68,8 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo weatherData={weatherData} />
+        <hr />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

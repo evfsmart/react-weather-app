@@ -1,0 +1,27 @@
+.Forecast {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.Forecast .Forecast-img {
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.Forecast .Forecast-day {
+  color: #6a8ab1;
+  font-weight: bold;
+}
+
+.Forecast .Forecast-temperatures {
+  color: #314085;
+}
+
+.Forecast .Forecast-temperature-max {
+  font-weight: bold;
+}
+
+.Forecast .Forecast-temperature-min {
+  opacity: 0.6;
+}

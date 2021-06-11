@@ -7,7 +7,15 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Resolute" />
         <footer>
-          This project was coded by Emma Smart and is{" "}
+          Coded by{" "}
+          <a
+            href="https://github.com/evfsmart"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Emma Smart
+          </a>
+          ,{" "}
           <a
             href="https://github.com/evfsmart/react-weather-app"
             target="_blank"
@@ -15,6 +23,23 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>
+          , and{" "}
+          <a
+            href="https://quizzical-euclid-9b8f7e.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            hosted on Netlify
+          </a>
+          . Weather icons by{" "}
+          <a
+            href="https://www.flaticon.com/authors/dinosoftlabs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            DiinosoftLabs
+          </a>
+          .
         </footer>
       </div>
     </div>
